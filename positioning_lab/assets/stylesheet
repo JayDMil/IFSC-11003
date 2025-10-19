@@ -1,0 +1,84 @@
+body {
+  margin: 0 15%;
+  background-color: #ecf0f1;
+}
+div {
+  border: solid #34495e 1px;
+  padding: 0 10px;
+  margin: 0 0 10px 0;
+  background-color: white;
+}
+.static {
+  position: static;
+  /*No need to define it explicitly.*/
+}
+.relative {
+  position: relative;
+}
+.absolute {
+  position: absolute;
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  padding: 10px;
+}
+.in-relative {
+  top: 60px;
+  right: 60px;
+}
+.in-container {
+  padding: 5px 0;
+  background-color: #1abc9c;
+}
+.top-right {
+  top: 0;
+  right: 0;
+  width: 20%;
+}
+.bottom-right {
+  bottom: 0;
+  right: 0;
+  width: 12%;
+  margin-bottom: 0;
+}
+body {
+  margin: 0 15%;
+  background-color: #ecf0f1;
+}
+div {
+  border: solid #34495e 1px;
+  padding: 0 10px;
+  margin: 0 0 10px 0;
+  background-color: white;
+}
+.static {
+  position: static;
+  /*No need to define it explicitly.*/
+}
+.relative {
+  position: relative;
+}
+.absolute {
+  position: absolute;
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  padding: 10px;
+}
+.in-relative {
+  top: 25px;
+  left: -30px;
+}
+.in-container {
+  padding: 5px 0;
+  background-color: #1abc9c;
+}
+.top-right {
+  top: 0;
+  right: 0;
+  width: 12%;
+}
+.bottom-right {
+  bottom: 100px;
+  right: 50px;
+  width: 12%;
+  margin-bottom: 0;
+}
