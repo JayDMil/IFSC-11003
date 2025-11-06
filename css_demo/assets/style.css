@@ -251,36 +251,22 @@ a {
     }
 }
 
-/* Responsive Design for Mobile */
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
     .site-wrapper {
-        flex-direction: column;
-        padding: 0;
+        padding: 1rem;
     }
 
     .main-content-wrapper {
         width: 100%;
-        order: 2; /* Main content appears after left sidebar */
     }
 
     .dashboard {
-        grid-template-columns: 1fr; /* Single column layout */
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
     }
 
-    .left-sidebar {
-        order: 1;
-    }
-
-    .right-sidebar {
-        order: 3;
-    }
-
-    .ascii-art-container {
-        display: none; /* Hide ASCII art on small screens */
-    }
-}
-
-@media (max-width: 1500px) {
+    .ascii-art-container,
     .top-left-image,
     .top-right-image,
     .bottom-left-image,
