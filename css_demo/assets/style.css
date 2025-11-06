@@ -178,6 +178,7 @@ a {
     width: 300px;
     height: auto;
     z-index: 10;
+    animation: pulse-green 6s infinite alternate;
 }
 
 /* Top Right Image */
@@ -188,6 +189,7 @@ a {
     width: 300px;
     height: auto;
     z-index: 10;
+    animation: pulse-blue 6s infinite alternate;
 }
 
 /* Bottom Left Image */
@@ -227,6 +229,24 @@ a {
     }
     to {
         transform: translateX(-100%);
+    }
+}
+
+@keyframes pulse-green {
+    from {
+        filter: drop-shadow(0 0 5px green);
+    }
+    to {
+        filter: drop-shadow(0 0 20px green);
+    }
+}
+
+@keyframes pulse-blue {
+    from {
+        filter: drop-shadow(0 0 5px blue);
+    }
+    to {
+        filter: drop-shadow(0 0 20px blue);
     }
 }
 
