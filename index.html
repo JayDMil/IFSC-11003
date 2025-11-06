@@ -84,7 +84,7 @@
                 <aside class="sidebar right-sidebar">
                     <div class="sidebar-widget">
                         <h3>Links</h3>
-                        <p>Placeholder for right sidebar content.</p>
+                        <p>Placeholder </p>
                          <h6>
                             &copy; 2025 Jayden — <a href="mailto:jdmiller3@ualr.edu">jdmiller3@ualr.edu</a>
                             &nbsp;|&nbsp; <a href="#top">Back to Top</a>
@@ -100,7 +100,7 @@
     </div>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            // Fetch and inject left ASCII art
+            // inject art
             fetch('assets/left-art.txt')
                 .then(response => response.text())
                 .then(text => {
@@ -108,7 +108,7 @@
                     leftArtElements.forEach(el => el.textContent = text);
                 });
 
-            // Fetch and inject right ASCII art
+            // inject art
             fetch('assets/right-art.txt')
                 .then(response => response.text())
                 .then(text => {
