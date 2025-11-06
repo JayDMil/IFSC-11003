@@ -1,0 +1,240 @@
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Header */
+header {
+    background: #0b3d91;
+    color: #ffffff;
+    padding: 1rem 0;
+    border-bottom: #e53935 3px solid;
+}
+
+header a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+header #logo {
+    height: 80px;
+    float: left;
+    margin-right: 20px;
+    margin-top: 5px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+header p {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+/* Navigation */
+nav {
+    background: #333;
+    color: #fff;
+    padding: 0.5rem 0;
+}
+
+nav ul {
+    padding: 0;
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+nav a:hover {
+    color: #e53935;
+}
+
+/* Main Content */
+main {
+    padding: 20px 0;
+}
+
+section {
+    margin-bottom: 20px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+h2 {
+    color: #0b3d91;
+    border-bottom: 2px solid #f4f4f4;
+    padding-bottom: 10px;
+}
+
+/* Rover Gallery - Interactive Card Style */
+.rover-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.rover-card {
+    position: relative;
+    height: 250px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    text-decoration: none;
+    color: white;
+}
+
+.rover-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(80%) brightness(0.6);
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.rover-card:hover img {
+    transform: scale(1.1);
+    filter: grayscale(0%) brightness(1);
+}
+
+.rover-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.rover-card:hover .rover-info {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.rover-info h3 {
+    margin: 0;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.rover-info p {
+    margin: 5px 0 0 0;
+    font-size: 1rem;
+}
+
+/* Rover Detail Page */
+.media-flex-container {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.media-flex-container > * {
+    flex: 1;
+    min-width: 0;
+}
+
+.rover-detail-img, .rover-video-embed {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.rover-video-embed {
+    aspect-ratio: 16 / 9;
+}
+
+.rover-video {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* Mission History Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #0b3d91;
+    color: white;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* FAQ List */
+dl {
+    margin-top: 20px;
+}
+
+dt {
+    font-weight: bold;
+    color: #0b3d91;
+    margin-top: 15px;
+}
+
+dd {
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 20px;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer a {
+    color: #fff;
+}
+
+footer a:hover {
+    color: #e53935;
+}
