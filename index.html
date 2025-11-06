@@ -10,45 +10,75 @@
     
 </head>
 <body id="top">
-    <div class="container">
-        <header>
-            <h1>Course Homepage</h1>
-            <a href="web-code.htm" title="Course Homepage">Assignment Prototype</a>
-            
-            <nav>
-                <ul>
-                    <li><a href="mailto:jdmiller3@ualr.edu" title="Email Contact">Contact</a></li>
-                    <li><a href="positioning_lab/absolute-1.htm">Absolute</a></li>
-                    <li><a href="positioning_lab/absolute-2.htm">Absolute 2</a></li>
-                    <li><a href="positioning_lab/float-1.htm">Float 1</a></li>
-                    <li><a href="positioning_lab/float-2.htm">Float 2</a></li>
-                    <li><a href="mars-rover/NASA.htm">Mars Rover Final</a></li>
-                    <li>
-                        <details>
-                            <summary>CSS Grid Lab</summary>
-                            <ul>
-                                <li><a href="css-grid-lab/grid-col-equal.htm">Grid Equal</a></li>
-                                <li><a href="css-grid-lab/grid-col-left.htm">Grid Left</a></li>
-                                <li><a href="css-grid-lab/grid-col-right.htm">Grid Right</a></li>
-                                <li><a href="css-grid-lab/grid-col-stacked.htm">Grid Stacked</a></li>
-                            </ul>
-                        </details>
-                    </li>
-                </ul>
-            </nav>
-        </header>
+    <header class="primary-header">
+        <h1>Course Homepage</h1>
+        <a href="web-code.htm" title="Course Homepage">Assignment Prototype</a>
+    </header>
 
-        <main>
-            <img src="assets/Screenshot 2025-10-06 153437.png" alt="Screenshot of frog assignment" width="500">
-            <img src="assets/garden.png" alt="Screenshot of garden" width="500">
+    <div class="dashboard">
+        <main class="content-feed">
+            <article class="post">
+                <header class="post-header">
+                    <h3>Froggy Assignment</h3>
+                </header>
+                <div class="post-content">
+                    <img src="assets/Screenshot 2025-10-06 153437.png" alt="Screenshot of frog assignment">
+                </div>
+            </article>
+
+            <article class="post">
+                <header class="post-header">
+                    <h3>Garden Screenshot</h3>
+                </header>
+                <div class="post-content">
+                    <img src="assets/garden.png" alt="Screenshot of garden">
+                </div>
+            </article>
         </main>
 
-        <footer>
-            <p>
-                &copy; 2025 Jayden — <a href="mailto:jdmiller3@ualr.edu">jdmiller3@ualr.edu</a>
-                &nbsp;|&nbsp; <a href="#top">Back to Top</a>
-            </p>
-        </footer>
-    </div> <!--end of container-->
+        <aside class="sidebar">
+            <div class="sidebar-widget">
+                <h3>Navigation</h3>
+                <nav>
+                    <ul>
+                        <li><a href="mailto:jdmiller3@ualr.edu" title="Email Contact">Contact</a></li>
+                        <li><a href="positioning_lab/absolute-1.htm">Absolute</a></li>
+                        <li><a href="positioning_lab/absolute-2.htm">Absolute 2</a></li>
+                        <li><a href="positioning_lab/float-1.htm">Float 1</a></li>
+                        <li><a href="positioning_lab/float-2.htm">Float 2</a></li>
+                        <li>
+                            <details>
+                                <summary>Mars Rover</summary>
+                                <ul>
+                                    <li><a href="mars-rover/home.htm">Home</a></li>
+                                    <li><a href="mars-rover/curiousity.htm">Curiosity</a></li>
+                                    <li><a href="mars-rover/perseverance.htm">Perseverance</a></li>
+                                    <li><a href="mars-rover/history.htm">History</a></li>
+                                    <li><a href="mars-rover/faq.htm">FAQ</a></li>
+                                </ul>
+                            </details>
+                        </li>
+                        <li>
+                            <details>
+                                <summary>CSS Grid Lab</summary>
+                                <ul>
+                                    <li><a href="css-grid-lab/grid-col-equal.htm">Grid Equal</a></li>
+                                    <li><a href="css-grid-lab/grid-col-left.htm">Grid Left</a></li>
+                                    <li><a href="css-grid-lab/grid-col-right.htm">Grid Right</a></li>
+                                    <li><a href="css-grid-lab/grid-col-stacked.htm">Grid Stacked</a></li>
+                                </ul>
+                            </details>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="sidebar-widget">
+                <h6>
+                    &copy; 2025 Jayden — <a href="mailto:jdmiller3@ualr.edu">jdmiller3@ualr.edu</a>
+                    &nbsp;|&nbsp; <a href="#top">Back to Top</a>
+                </h6>
+            </div>
+        </aside>
+    </div> <!--end of dashboard-->
 </body>
 </html>

@@ -10,7 +10,6 @@ div {
 }
 .static {
   position: static;
-  /*No need to define it explicitly.*/
 }
 .relative {
   position: relative;
@@ -52,7 +51,6 @@ div {
 }
 .static {
   position: static;
-  /*No need to define it explicitly.*/
 }
 .relative {
   position: relative;
