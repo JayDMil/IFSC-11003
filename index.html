@@ -16,92 +16,8 @@
     <img src="css_demo/assets/Layer 4.png" alt="Daggerfall cut" class="bottom-right-image">
     <div class="site-wrapper">
         <div class="ascii-art-container left">
-            <pre class="ascii-art">
-'  . +  *   .                               
-                                             '    
-      .                 .  .            ':.  
-+        .                          +     '::.
-       |                                    '.
-      -o-           ' .              .         
-       |             .             +\         /
-   +                          .      \       / 
-       .-.        '    +  o           *     * 
-        ) )                   | +             *
-     + '-´                  - o -            
-          +      '        '   |        .       
-            .* '                      o     *  
-                       +                       
-                          o              .     
-                                               
-'                                     +        
-                   +                       '   
-      '                                        
- .+ *                        .          +      
-        
-'  . +  *   .                               
-                                             '    
-      .                 .  .            ':.  
-+        .                          +     '::.
-       |                                    '.
-      -o-           ' .              .         
-       |             .             +\         /
-   +                          .      \       / 
-       .-.        '    +  o           *     * 
-        ) )                   | +             *
-     + '-´                  - o -            
-          +      '        '   |        .       
-            .* '                      o     *  
-                       +                       
-                          o              .     
-                                               
-'                                     +        
-                   +                       '   
-      '                                        
- .+ *                        .          +      
-        </pre>
-            <pre class="ascii-art" aria-hidden="true">
-'  . +  *   .                               
-                                             '    
-      .                 .  .            ':.  
-+        .                          +     '::.
-       |                                    '.
-      -o-           ' .              .         
-       |             .             +\         /
-   +                          .      \       / 
-       .-.        '    +  o           *     * 
-        ) )                   | +             *
-     + '-´                  - o -            
-          +      '        '   |        .       
-            .* '                      o     *  
-                       +                       
-                          o              .     
-                                               
-'                                     +        
-                   +                       '   
-      '                                        
- .+ *                        .          +      
-        
-'  . +  *   .                               
-                                             '    
-      .                 .  .            ':.  
-+        .                          +     '::.
-       |                                    '.
-      -o-           ' .              .         
-       |             .             +\         /
-   +                          .      \       / 
-       .-.        '    +  o           *     * 
-        ) )                   | +             *
-     + '-´                  - o -            
-          +      '        '   |        .       
-            .* '                      o     *  
-                       +                       
-                          o              .     
-                                               
-'                                     +        
-                   +                       '   
-      '                                        
- .+ *                        .          +      
-        </pre>
+            <pre class="ascii-art"></pre>
+            <pre class="ascii-art" aria-hidden="true"></pre>
         </div>
         <div class="main-content-wrapper">
             <header class="primary-header">
@@ -178,91 +94,28 @@
             </div> <!--end of dashboard-->
         </div>
         <div class="ascii-art-container right">
-            <pre class="ascii-art">
-                                          +  
-o       '                     
-  '    *                '     .
-_         +   '          .        
-_)              o                 
-'           .                    
-           .   +            . 
- .                     .      
-                  *           
-           '     *          
-      +                            
-           *                      
-                                  
-                                  
-                        .   |    
-                          - o -  
-     '    +      *          |    
-      *   '      *      .      
-                           +     
-        o
-                                          +  
-o       '                     
-  '    *                '     .
-_         +   '          .        
-_)              o                 
-'           .                    
-           .   +            . 
- .                     .      
-                  *           
-           '     *          
-      +                            
-           *                      
-                                  
-                                  
-                        .   |    
-                          - o -  
-     '    +      *          |    
-      *   '      *      .      
-                           +     
-        o
-        </pre>
-            <pre class="ascii-art" aria-hidden="true">
-                                          +  
-o       '                     
-  '    *                '     .
-_         +   '          .        
-_)              o                 
-'           .                    
-           .   +            . 
- .                     .      
-                  *           
-           '     *          
-      +                            
-           *                      
-                                  
-                                  
-                        .   |    
-                          - o -  
-     '    +      *          |    
-      *   '      *      .      
-                           +     
-        o
-                                          +  
-o       '                     
-  '    *                '     .
-_         +   '          .        
-_)              o                 
-'           .                    
-           .   +            . 
- .                     .      
-                  *           
-           '     *          
-      +                            
-           *                      
-                                  
-                                  
-                        .   |    
-                          - o -  
-     '    +      *          |    
-      *   '      *      .      
-                           +     
-        o
-        </pre>
+            <pre class="ascii-art"></pre>
+            <pre class="ascii-art" aria-hidden="true"></pre>
         </div>
     </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Fetch and inject left ASCII art
+            fetch('assets/left-art.txt')
+                .then(response => response.text())
+                .then(text => {
+                    const leftArtElements = document.querySelectorAll('.ascii-art-container.left .ascii-art');
+                    leftArtElements.forEach(el => el.textContent = text);
+                });
+
+            // Fetch and inject right ASCII art
+            fetch('assets/right-art.txt')
+                .then(response => response.text())
+                .then(text => {
+                    const rightArtElements = document.querySelectorAll('.ascii-art-container.right .ascii-art');
+                    rightArtElements.forEach(el => el.textContent = text);
+                });
+        });
+    </script>
 </body>
 </html>
