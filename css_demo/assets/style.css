@@ -53,6 +53,7 @@ a {
 .main-content-wrapper {
     flex-shrink: 0;
     width: 1200px; 
+    max-width: 100%;
     position: relative;
     z-index: 2;
 }
