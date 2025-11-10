@@ -3,65 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Reviewing NASA's incredible efforts in exploring Mars">
-    <meta name="keywords" content="NASA, Mars, Rover, Curiosity, Perseverance">
+    <meta name="description" content="Dragon Raid – an indie action title where you build strength and allies to slay the god-dragon terrorizing the lands.">
+    <meta name="keywords" content="Dragon Raid, indie game, action RPG, development, roadmap, features, gameplay">
     <meta name="robots" content="noindex">
-    <title>NASA Mars Rovers - Home</title>
+    <title>Dragon Raid – Home</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preload" href="css/style.css" as="style">
 </head>
 <body>
+    <a href="#main" class="skip-link">Skip to main content</a>
     <header role="banner">
         <div class="container">
-            <a href="NASA.htm"><img src="images/nasa-logo-web-rgb.png" alt="NASA Logo" id="logo"></a>
-            <h1>NASA Mars Rovers</h1>
-            <p>Robotic Explorers on the Red Planet</p>
+            <h1>Dragon Raid</h1>
+            <p>Slay the god-dragon terrorizing the lands</p>
         </div>
     </header>
 
-    <nav role="navigation">
+    <nav role="navigation" aria-label="Primary">
         <div class="container">
             <ul>
-                <li><a href="home.htm">Home</a></li>
-                <li><a href="history.htm">Mission History</a></li>
+                <li><a href="home.htm" aria-current="page">Home</a></li>
+                <li><a href="history.htm">Roadmap</a></li>
                 <li><a href="faq.htm">FAQ</a></li>
             </ul>
         </div>
     </nav>
 
-    <main role="main">
+    <main id="main" role="main">
         <div class="container">
-            <section id="program-overview">
-                <h2>The Mars Rover Program, An Introduction.</h2>
-                <p>NASA's Mars Exploration Program (MEP) is a program spanning decades, aimed at exploring the beauty of Mars and discovering more about our universe that we would not be aware of without our Rovers.</p>
-                <p>These robot helpers are meant to explore the surface of Mars and bring back any data that would help us understand the planet better. While they may not return today, nor tomorrow, their results will speak for a lifetime when they return.</p>
+            <section class="hero" aria-label="Promotional">
+                <div class="hero-content">
+                    <h2>Enter the Raid</h2>
+                    <p>Awake, wee warrior. Forge your path through this harsh world where you have been fated to slay the progenitor of Dragon-Kind. Do not break or falter.</p>
+                    <p>
+                        <a class="btn btn-primary" href="history.htm">View Roadmap</a>
+                        <a class="btn" href="https://github.com/tdgeter/Mobile-Game-Project" target="_blank" rel="noopener">GitHub Repository</a>
+                    </p>
+                </div>
+                <figure class="hero-media">
+                    <img class="hero-img" src="images/bg.png" alt="Dragon Raid menu screen showing the game title over a dark, dramatic backdrop"/>
+                </figure>
+            </section>
+            <section id="game-overview">
+                <h2>Game Overview</h2>
+                <p>Dragon Raid is an indie action project focused on turn-based combat, asciiart, and a sense of roguelike adventure. This site shares a quick overview, the development roadmap, and answers to common questions.</p>
+                <p>Development is iterative and public—feedback and issue reports help shape balance, readability, and encounter design.</p>
             </section>
 
-            <section id="rovers">
-                <h2>Meet our little robot helpers</h2>
-                <div class="rover-gallery">
-                    <a href="curiousity.htm" class="rover-card">
-                        <img src="images/curiousity.jpg" alt="The Curiosity rover self-portrait on Mars.">
-                        <div class="rover-info">
-                            <h3>Curiosity</h3>
-                            <p>Perogative: Determine if Mars could support microbial life.</p>
-                        </div>
-                    </a>
-                    <a href="perseverance.htm" class="rover-card">
-                        <img src="images/perseverance.jpg" alt="The Perseverance rover on the surface of Mars.">
-                        <div class="rover-info">
-                            <h3>Perseverance</h3>
-                            <p>Perogative: Discover signs of ancient life and collect samples for the return to Earth.</p>
-                        </div>
-                    </a>
-                </div>
+            <section id="features">
+                <h2>Key Features</h2>
+                <ul class="feature-list">
+                    <li>
+                        <h3>Core Gameplay</h3>
+                        <p>Turn-based combat with a focus on randomized builds and items that stay with you for your playthrough.</p>
+                    </li>
+                    <li>
+                        <h3>Progression</h3>
+                        <p>Skills and Equipment that will give you different ways to battle in combat as you clear more zones.</p>
+                    </li>
+                    <li>
+                        <h3>World & Story</h3>
+                        <p>A high-fantasy world with a grim undertone, enticing the player to always try to explore more.</p>
+                    </li>
+                    <li>
+                        <h3>Accessibility</h3>
+                        <p>I know I'm working on it guys :(</p>
+                    </li>
+                </ul>
             </section>
         </div>
     </main>
 
     <footer role="contentinfo">
         <div class="container">
-            <p>This website was created by a student of UALR, this is not official.</p>
-            <p><a href="mailto:jdmiller3@ualr.edu">Contact Us</a> | <a href="https://www.nasa.gov/" target="_blank">Official NASA Website</a></p>
+            <p>This website was created as a student project for educational purposes(and promotional).</p>
+            <p><a href="mailto:jdmiller3@ualr.edu">Email the developer</a> | <a href="https://github.com/tdgeter/Mobile-Game-Project" target="_blank" rel="noopener">Dragon Raid on GitHub</a></p>
         </div>
     </footer>
 </body>

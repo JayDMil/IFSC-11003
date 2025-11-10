@@ -3,67 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="The mission history of NASA's Mars Rovers, including launch and landing timelines.">
-    <meta name="keywords" content="NASA, Mars, Rover, Mission History, Timeline, Spirit, Opportunity, Curiosity, Perseverance">
+    <meta name="description" content="Dragon Raid roadmap and development timeline with milestones and status.">
+    <meta name="keywords" content="Dragon Raid, game roadmap, development timeline, milestones">
     <meta name="robots" content="noindex">
-    <title>NASA Mars Rovers - Mission History</title>
+    <title>Dragon Raid – Roadmap</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <a href="#main" class="skip-link">Skip to main content</a>
     <header role="banner">
         <div class="container">
-            <a href="NASA.htm"><img src="images/nasa-logo-web-rgb.png" alt="NASA Logo" id="logo"></a>
-            <h1>NASA Mars Rovers</h1>
-            <p>Robotic Explorers on the Red Planet</p>
+            <h1>Dragon Raid</h1>
+            <p>Development Roadmap</p>
         </div>
     </header>
 
-    <nav role="navigation">
+    <nav role="navigation" aria-label="Primary">
         <div class="container">
             <ul>
                 <li><a href="home.htm">Home</a></li>
-                <li><a href="history.htm">Mission History</a></li>
+                <li><a href="history.htm" aria-current="page">Roadmap</a></li>
                 <li><a href="faq.htm">FAQ</a></li>
             </ul>
         </div>
     </nav>
 
-    <main role="main">
+    <main id="main" role="main">
         <div class="container">
             <section id="timeline">
-                <h2>Mission Timeline</h2>
+                <h2>Milestone Timeline</h2>
                 <table>
                     <thead>
                         <tr>
-                            <th>Rover</th>
-                            <th>Launch Date</th>
-                            <th>Landing Date</th>
-                            <th>Mission Status</th>
+                            <th scope="col">Milestone</th>
+                            <th scope="col">Target Date</th>
+                            <th scope="col">Details</th>
+                            <th scope="col">Status</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Curiosity</td>
-                            <td>November 26, 2011</td>
-                            <td>August 6, 2012</td>
-                            <td>Operational</td>
+                            <td>Prototype Complete</td>
+                            <td>2025</td>
+                            <td>Core movement and combat loop implemented; basic UI pass.</td>
+                            <td>In Progress</td>
                         </tr>
                         <tr>
-                            <td>Perseverance</td>
-                            <td>July 30, 2020</td>
-                            <td>February 18, 2021</td>
-                            <td>Operational</td>
+                            <td>Alpha Build</td>
+                            <td>Q1 2026</td>
+                            <td>First playable slice with two zones and initial progression systems.</td>
+                            <td>Planned</td>
+                        </tr>
+                        <tr>
+                            <td>Public Demo</td>
+                            <td>Q3 2026</td>
+                            <td>Optimized demo with feedback collection</td>
+                            <td>Planned</td>
                         </tr>
                     </tbody>
                 </table>
+                <p><small>Roadmap is heavily hopeful.</small></p>
             </section>
         </div>
     </main>
 
     <footer role="contentinfo">
         <div class="container">
-            <p>This website was created by a student of UALR, this is not official.</p>
-            <p><a href="mailto:jdmiller3@ualr.edu">Contact Us</a> | <a href="https://www.nasa.gov/" target="_blank">Official NASA Website</a></p>
+            <p>This website was created as a student project for educational purposes.</p>
+            <p><a href="mailto:jdmiller3@ualr.edu">Email the developer</a> | <a href="https://github.com/tdgeter/Mobile-Game-Project" target="_blank" rel="noopener">Dragon Raid on GitHub</a></p>
         </div>
     </footer>
 </body>

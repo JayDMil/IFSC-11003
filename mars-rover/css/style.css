@@ -3,8 +3,8 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #0b0b0f; /* near-black */
+    color: #eaeaea; /* light text for contrast */
 }
 
 .container {
@@ -13,16 +13,20 @@ body {
     overflow: hidden;
 }
 
+@media (max-width: 768px) {
+    .container { width: 90%; }
+}
+
 /* Header */
 header {
-    background: #0b3d91;
+    background: #000;
     color: #ffffff;
     padding: 1rem 0;
-    border-bottom: #e53935 3px solid;
+    border-bottom: #d4af37 3px solid; /* gold accent */
 }
 
 header a {
-    color: #ffffff;
+    color: #d4af37; /* gold */
     text-decoration: none;
 }
 
@@ -35,18 +39,19 @@ header #logo {
 
 header h1 {
     margin: 0;
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     font-weight: bold;
 }
 
 header p {
     margin: 0;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+    color: #cfcfcf;
 }
 
 /* Navigation */
 nav {
-    background: #333;
+    background: #111;
     color: #fff;
     padding: 0.5rem 0;
 }
@@ -62,13 +67,28 @@ nav ul li {
 }
 
 nav a {
-    color: #fff;
+    color: #eaeaea;
     text-decoration: none;
-    font-size: 1.1rem;
+    font-size: 1.05rem;
 }
 
 nav a:hover {
-    color: #e53935;
+    color: #d4af37;
+}
+
+/* Focus styles for accessibility */
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus,
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 2px dashed #d4af37;
+    outline-offset: 2px;
 }
 
 /* Main Content */
@@ -78,76 +98,96 @@ main {
 
 section {
     margin-bottom: 20px;
-    background: #fff;
+    background: #111;
     padding: 20px;
-    border-radius: 5px;
+    border-radius: 8px;
+    border: 1px solid #2a2a2a;
 }
 
 h2 {
-    color: #0b3d91;
-    border-bottom: 2px solid #f4f4f4;
+    color: #d4af37;
+    border-bottom: 2px solid #2a2a2a;
     padding-bottom: 10px;
 }
 
-/* Rover Gallery - Interactive Card Style */
-.rover-gallery {
+/* Hero section */
+.hero {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: 1.2fr 1fr;
     gap: 20px;
-}
-
-.rover-card {
-    position: relative;
-    height: 250px;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    text-decoration: none;
-    color: white;
-}
-
-.rover-card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: grayscale(80%) brightness(0.6);
-    transition: transform 0.4s ease, filter 0.4s ease;
-}
-
-.rover-card:hover img {
-    transform: scale(1.1);
-    filter: grayscale(0%) brightness(1);
-}
-
-.rover-info {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    align-items: center;
+    background: #0f0f12;
+    border: 1px solid #2a2a2a;
+    border-radius: 12px;
     padding: 20px;
-    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
-.rover-card:hover .rover-info {
-    opacity: 1;
-    transform: translateY(0);
+@media (max-width: 900px) {
+    .hero { grid-template-columns: 1fr; }
 }
 
-.rover-info h3 {
+.hero h2 { border: 0; margin-top: 0; }
+.hero p { color: #d8d8d8; }
+
+.hero-img {
+    width: 100%;
+    height: auto;
+    max-height: 420px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 10px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    border: 1px solid #2a2a2a;
+    background: #111;
+    color: #eaeaea;
+    transition: transform .05s ease, background .2s ease, color .2s ease, border-color .2s ease;
+}
+.btn:active { transform: translateY(1px); }
+.btn:hover { border-color: #3a3a3a; }
+
+.btn-primary {
+    background: #d4af37;
+    color: #000;
+    border-color: #d4af37;
+}
+.btn-primary:hover { background: #c7a12a; border-color: #c7a12a; }
+
+/* Generic feature list grid */
+.feature-list {
+    list-style: none;
+    padding: 0;
     margin: 0;
-    color: #fff;
-    font-size: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
 }
 
-.rover-info p {
-    margin: 5px 0 0 0;
-    font-size: 1rem;
+.feature-list li {
+    background: #0f0f12;
+    border: 1px solid #2a2a2a;
+    padding: 16px;
+    border-radius: 8px;
 }
 
-/* Rover Detail Page */
+/* Legacy rover card styles (unused but retained in case of future imagery) */
+.rover-gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+.rover-card { position: relative; height: 250px; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.4); text-decoration: none; color: white; }
+.rover-card img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(40%) brightness(0.6); transition: transform 0.4s ease, filter 0.4s ease; }
+.rover-card:hover img { transform: scale(1.05); filter: grayscale(0%) brightness(0.9); }
+.rover-info { position: absolute; bottom: 0; left: 0; right: 0; padding: 20px; background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0) 100%); opacity: 0; transform: translateY(20px); transition: opacity 0.4s ease, transform 0.4s ease; }
+.rover-card:hover .rover-info { opacity: 1; transform: translateY(0); }
+.rover-info h3 { margin: 0; color: #fff; font-size: 1.3rem; }
+.rover-info p { margin: 5px 0 0 0; font-size: 0.95rem; }
+
+/* Media blocks */
 .media-flex-container {
     display: flex;
     gap: 20px;
@@ -177,7 +217,7 @@ h2 {
     margin-bottom: 20px;
 }
 
-/* Mission History Table */
+/* Tables */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -185,7 +225,7 @@ table {
 }
 
 table, th, td {
-    border: 1px solid #ddd;
+    border: 1px solid #2a2a2a;
 }
 
 th, td {
@@ -194,12 +234,13 @@ th, td {
 }
 
 th {
-    background-color: #0b3d91;
-    color: white;
+    background-color: #d4af37; /* gold */
+    color: #000;
+    font-weight: 700;
 }
 
 tbody tr:nth-child(even) {
-    background-color: #f2f2f2;
+    background-color: #121216;
 }
 
 /* FAQ List */
@@ -209,7 +250,7 @@ dl {
 
 dt {
     font-weight: bold;
-    color: #0b3d91;
+    color: #d4af37;
     margin-top: 15px;
 }
 
@@ -220,7 +261,7 @@ dd {
 
 /* Footer */
 footer {
-    background: #333;
+    background: #000;
     color: #fff;
     text-align: center;
     padding: 1rem 0;
@@ -232,9 +273,26 @@ footer p {
 }
 
 footer a {
-    color: #fff;
+    color: #eaeaea;
 }
 
 footer a:hover {
-    color: #e53935;
+    color: #d4af37;
+}
+
+/* Skip link for accessibility */
+.skip-link {
+    position: absolute;
+    left: -999px;
+    top: 0;
+    background: #d4af37;
+    color: #000;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+.skip-link:focus {
+    left: 16px;
+    top: 16px;
+    z-index: 1000;
 }
