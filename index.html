@@ -90,7 +90,7 @@
                         </h6>
                     </div>
                 </aside>
-            </div> <!--end of dashboard-->
+            </div> 
         </div>
         <div class="ascii-art-container right">
             <pre class="ascii-art"></pre>
@@ -99,7 +99,6 @@
     </div>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            // inject art
             fetch('assets/left-art.txt')
                 .then(response => response.text())
                 .then(text => {
@@ -107,7 +106,6 @@
                     leftArtElements.forEach(el => el.textContent = text);
                 });
 
-            // inject art
             fetch('assets/right-art.txt')
                 .then(response => response.text())
                 .then(text => {
