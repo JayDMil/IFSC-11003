@@ -178,7 +178,7 @@ a {
     left: 50px;
     width: 300px;
     height: auto;
-    z-index: 10;
+    z-index: 1;
     animation: pulse-green 6s infinite alternate;
 }
 
