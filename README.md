@@ -1,1 +1,1 @@
-ISFC-11003, first assignment is titled assignment prototype on my homepage.
+Used to be a class assignment, now it's my website.
