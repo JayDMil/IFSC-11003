@@ -1,1 +1,1 @@
-Used to be a class assignment, now it's my website.
+Personal portfolio and project showcase website.
